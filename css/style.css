@@ -96,8 +96,15 @@ body{
   padding-top: 32px;
   padding-bottom: 32px;
    color: var(--second-text-color);
-    
  }
+ .icon-cont{
+  fill: currentColor;
+ }
+ .icon-cont:hover ,
+ .icon-cont:focus{
+  fill: currentColor;
+ }
+
  .nav-link:hover , .nav-link:focus , 
  .cont-link:hover , .cont-link:focus ,
  .adress:hover , .adress:focus , 
@@ -120,12 +127,23 @@ body{
 
  /* Intro */
 .intro{
+   max-width: 1600px;
+   height: 600px;
+   margin: 0 auto;
    background-color: var(--primary-bgc);
+   background-image: linear-gradient(to right, 
+    rgba(47, 48, 58, 0.4), 
+    rgba(47, 48, 58, 0.4 )), 
+      url(../image/Main/intro/bg-intro.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
    text-align: center;
 }
  .intro-title{
    margin-top: 0;
    margin-bottom: 0;
+   padding-top: 4.54em;
    color: var(--white-color);
    font-weight: 900;
    letter-spacing: 0.06em;
@@ -145,6 +163,7 @@ body{
    border: none;
  }
  .btn.primary{
+  margin-top: 2.5em;
    min-width: 200px;
    background-color: var(--accent-color);
    color: var(--white-color);
@@ -167,6 +186,9 @@ body{
  .benefits-list {
   display: flex;
   
+ }
+ .icon-benefits{
+  fill: currentColor;
  }
  .benefits-list .item{
   width: calc((100%-90px)/4);

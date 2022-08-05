@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebStudio</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -23,8 +24,16 @@
                  </nav>
                 <!-- Контакты -->
                     <ul class="nav-list list">
-                        <li><a class="cont-link link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-                        <li><a class="cont-link link" href="tel:+380961111111">+38 096 111 11 11</a></li>
+                        <li><a class="cont-link mail link" href="mailto:info@devstudio.com">
+                                <svg class="icon-cont" width="16" height="12">
+                                    <use href="./image/svg/symbol-defs 2.svg#icon-mail"></use>
+                                </svg>
+                                    info@devstudio.com</a></li>
+                        <li><a class="cont-link tel link" href="tel:+380961111111">
+                                <svg class="icon-cont" width="16" height="12">
+                                    <use xlink:href="./image/svg/icons.svg#envelope"></use>
+                                </svg>
+                                    +38 096 111 11 11</a></li>
                     </ul>
         </div>
     </header>
@@ -42,6 +51,9 @@
                 <ul class="benefits-list list">
                     <li class="item">
                         <div>
+                            <svg class="icon-benefits">
+                                <use href="/image/svg/clock 1.svg"></use>
+                            </svg>
                             <h3 class="benefits-title">Внимание к деталям</h3>
                             <p class="benefits-description">Идейные соображения, a также начало повседневной работы по формированию позиции.</p>
                         </div>
@@ -72,9 +84,9 @@
                 <div class="container">
                     <h2 class="doing-title title">Чем мы занимаемся</h2>
                     <ul class="doing-list list">
-                        <li><img src="./img/Main/do/box1.jpg" width="370" alt="box1"></li>
-                        <li><img src="./img/Main/do/box2.jpg" width="370" alt="box2"></li>
-                        <li><img src="./img/Main/do/box3.jpg" width="370" alt="box3"></li>
+                        <li><img src="./image/Main/do/box1.jpg" width="370" alt="box1"></li>
+                        <li><img src="./image/Main/do/box2.jpg" width="370" alt="box2"></li>
+                        <li><img src="./image/Main/do/box3.jpg" width="370" alt="box3"></li>
                     </ul>
                 </div>
             </section>
@@ -85,28 +97,28 @@
                     <ul class="team-list list">
                         <li>
                             <div class="team-container">
-                                <img class="team-photo" src="./img/Main/team/team1.jpg" width="270" alt="team1">
+                                <img class="team-photo" src="./image/Main/team/team1.jpg" width="270" alt="team1">
                                 <h3 class="team-name">Игорь Демьяненко</h3>
                                 <p class="team-position">Product Designer</p>
                             </div>
                         </li>
                         <li>
                             <div class="team-container">
-                                <img class="team-photo" src="./img/Main/team/team2.jpg" width="270" alt="team2">
+                                <img class="team-photo" src="./image/Main/team/team2.jpg" width="270" alt="team2">
                                 <h3 class="team-name">Ольга Репина</h3>
                                 <p class="team-position">Frontend Developer</p>
                             </div>
                         </li>
                         <li>
                             <div class="team-container">
-                                <img class="team-photo" src="./img/Main/team/team3.jpg" width="270" alt="team3">
+                                <img class="team-photo" src="./image/Main/team/team3.jpg" width="270" alt="team3">
                                 <h3 class="team-name">Николай Тарасов</h3>
                                 <p class="team-position">Marketing</p>
                              </div>
                         </li>
                         <li>
                             <div class="team-container">
-                                <img class="team-photo" src="./img/Main/team/team4.jpg" width="270" alt="team4">
+                                <img class="team-photo" src="./image/Main/team/team4.jpg" width="270" alt="team4">
                                 <h3 class="team-name">Михаил Ермаков</h3>
                                 <p class="team-position">UI Designer</p>
                             </div>
