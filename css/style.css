@@ -9,7 +9,8 @@
     --primary-bgc: #2F303A;
     --contact-color:  rgba(255, 255, 255, 0.6);
     --second-bgc:#F5F4FA;
-
+    --social-bgc:#AFB1B8;
+    --social-join:rgba(255, 255, 255, 0.1);
 }
 html{
    box-sizing: border-box;
@@ -31,6 +32,10 @@ body{
 }
 
 /* Обнуление */
+h1,h2,h3,h4{
+  margin: 0;
+  padding: 0;
+}
 .list {
    margin: 0;
    padding: 0;
@@ -40,12 +45,12 @@ body{
    margin: 0;
    padding: 0;
    text-decoration: none;
+   line-height: 0;
 }
 
 /* Общее для тайтлов */
 .title{
-   margin: 0;
-   padding: 0;
+   margin-bottom: 1.39em;
    color: var(--primary-text-color);
    font-weight: 700;
    font-size: 2.25em;
@@ -53,7 +58,17 @@ body{
    text-align: center;
    letter-spacing: 0.03em;
 }
-
+.sub-title{
+  font-weight: 700;
+  font-size: 0.875em;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.section{
+  padding-top: 5.875em;
+  padding-bottom: 5.875em;
+}
 /* Header */
  .logo{
    text-decoration: none;
@@ -63,11 +78,11 @@ body{
    font-size: 1.625em;
    line-height: 1.29;
    margin-right: 94px;
-   padding-top: 32px;
-   padding-bottom: 32px;
+   padding-top: 0.92em;
+   padding-bottom: 0.92em;
  }
- .nav-list{
-  display: flex;
+ .nav-list {
+  display: inline-flex;
   align-items: center;
   font-weight: 500;
   font-size: 0.875em;
@@ -93,11 +108,15 @@ body{
    color: var(--primary-text-color);
  }
  .cont-link{
+  display: inline-flex;
   padding-top: 32px;
   padding-bottom: 32px;
-   color: var(--second-text-color);
- }
+  color: var(--second-text-color);
+  text-align: center;
+  line-height: 1;
+}
  .icon-cont{
+  margin-right: 0.625em;
   fill: currentColor;
  }
  .icon-cont:hover ,
@@ -187,6 +206,11 @@ body{
   display: flex;
   
  }
+ .icon-item{
+  margin-bottom: 30px;
+  padding: 25px 100px;
+  background-color: var(--second-bgc);
+ }
  .icon-benefits{
   fill: currentColor;
  }
@@ -197,14 +221,8 @@ body{
   margin-right: 30px;
  }
  .benefits-title{
-   margin-top: 0;
    margin-bottom: 0.75em;
    color: var(--primary-text-color);
-   font-weight: 700;
-   font-size: 0.875em;
-   line-height: 1;
-   letter-spacing: 0.03em;
-   text-transform: uppercase;
  }
  .benefits-description{
    margin-top: 0;
@@ -217,13 +235,6 @@ body{
  }
 
  /* Чем мы занимаемся */
- .doing{
-   padding-top: 5.875em;
-   padding-bottom: 5.875em;
- }
- .doing-title{
-   margin-bottom: 1.39em;
- }
  .doing-list{
    display: flex;
  }
@@ -232,13 +243,7 @@ body{
  }
  /* Наша команда  */
  .team{
-  padding-top: 5.875em;
   background-color: var(--second-bgc);
-  padding-bottom: 5.875em;
-  padding-top: 5.875em;
- }
- .team-title{
-   margin-bottom: 1.39em;
  }
  .team-list{
   display: flex;
@@ -246,7 +251,7 @@ body{
  .team-container{
    display: block;
    background-color: var(--white-color);
-   height: 368px;
+   height: 428px;
    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
                0px 1px 1px rgba(0, 0, 0, 0.14),
                0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -268,7 +273,7 @@ body{
  }
  .team-position{
    margin-top: 0;
-   margin-bottom: 1.875em;
+   margin-bottom: 1em;
    color: var(--second-text-color);
    font-weight: 400;
    font-size: 1em;
@@ -276,9 +281,76 @@ body{
    text-align: center;
    letter-spacing: 0.03em;
  }
- .team-list li:not(:last-child){
+ .team-list .team-member:not(:last-child){
   margin-right: 30px;
  }
+
+/* Social */
+
+.social{
+  display: inline-flex;
+
+}
+.social-team{
+  margin-right: 32px;
+  margin-left: 32px;
+}
+.social-item{
+  display: block;
+  margin-right: 10px;
+  padding: 12px;
+  border-radius: 50%;
+
+}
+.team-item{
+  color: var(--social-bgc);
+  background-color: var(--white-color);
+}
+.icon-social{
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+.social-team{
+  margin-right: 32px;
+  margin-left: 32px;
+}
+
+.social-item:hover ,
+.social-item:focus{
+  color: var(--white-color);
+  background-color: var(--accent-color);
+}
+.join-item{
+  color: var(--white-color);
+  background-color: var(--social-join);
+}
+/* Клиенты */
+.clients-list{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.item-client{
+  display: block;
+  padding: 14.5px 30.5px;
+  color: var(--social-bgc);
+  border: 1px solid var(--social-bgc);
+  border-radius: 4px;
+}
+.item-client:focus ,
+.item-client:hover{
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+.clients-list li:not(:last-child){
+  margin-right: 30px;
+}
+.icon-client{
+  width: 106px;
+  height: 60px;
+  fill: currentColor;
+}
  /* Футер */
  .footer{
    padding: 3.75em 0;
@@ -294,20 +366,24 @@ body{
    line-height: 1.71;
    letter-spacing: 0.03em;
  }
- .adress-list{
-   margin: 0.642em 0;
- }
- .adress-list:first-child ,
- .adress-list:last-child{
-   margin: 0;
- }
  .adress{
    color: var(--white-color);
  }
  .contact{color: var(--contact-color);
  }
-
-
+ .footer-container{
+  display: inline-flex;
+  align-content: center;
+ }
+/* Присоединяйтесь */
+.title-join{
+  margin-top: 0.9em;
+  margin-bottom: 1.42em;
+  color: var(--white-color);
+}
+.adress-list{
+  margin-right: 4.375em;
+}
 
  /* Портфолио */
  .header{
@@ -348,11 +424,26 @@ body{
 .filter-unit:not(:last-child){
   margin-right: 8px;
 }
-.exampl{
-   display: inline-block;
-   height: 404px;
-   background: #FFFFFF;
-   border: 1px solid #EEEEEE;
+.work-item{
+  width: 370px;
+  display: inline-block;
+  height: 404px;
+  background: #FFFFFF;
+  border: 1px solid #EEEEEE;
+  /* width: calc((100%-120px)/3); */
+}
+.work-item:hover,
+.work-item:focus{
+  box-shadow: 
+              0px 1px 1px rgba(0, 0, 0, 0.12),
+              0px 4px 4px rgba(0, 0, 0, 0.06),
+              1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.work-item:not(:nth-child(3n)){
+  margin-right: 30px;
+}
+.work-item:not(:nth-last-child(-n+3)){
+  margin-bottom: 30px;
 }
 .exampl-img{
    margin-bottom: 1.25em;
@@ -380,14 +471,4 @@ body{
 .work-list{
   display: flex;
   flex-wrap: wrap;
-}
-.work-item{
-  width: 370px;
-  /* width: calc((100%-120px)/3); */
-}
-.work-item:not(:nth-child(3n)){
-  margin-right: 30px;
-}
-.work-item:not(:nth-last-child(-n+3)){
-  margin-bottom: 30px;
 }
