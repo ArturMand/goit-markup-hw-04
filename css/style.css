@@ -172,6 +172,10 @@ img {
   text-align: center;
 }
 .intro-title {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.68em;
+  max-width: 650px;
   color: var(--white-color);
   font-weight: 900;
   letter-spacing: 0.06em;
@@ -182,19 +186,22 @@ img {
 
 /* btn */
 .btn {
+  padding: 0;
+  margin: 0;
   font-size: 1em;
   line-height: 1.53em;
   display: inline-block;
+  justify-content: center;
+  align-items: center;
   border-radius: 4px;
   cursor: pointer;
   border: none;
 }
 .btn.primary {
-  margin-top: 2.5em;
   min-width: 200px;
+  min-height: 50px;
   background-color: var(--accent-color);
   color: var(--white-color);
-  padding: 10px 32px;
   letter-spacing: 0.06em;
   font-weight: 700;
 }
@@ -215,7 +222,11 @@ img {
 }
 .icon-item {
   margin-bottom: 30px;
-  padding: 25px 100px;
+  min-width: 270px;
+  min-height: 120px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--second-bgc);
 }
 .icon-benefits {
@@ -300,14 +311,17 @@ img {
 }
 
 .social-item {
-  display: block;
-  padding: 12px;
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
 }
 .social li:not(:last-child) {
   margin-right: 10px;
 }
-.team-item {
+.social-team .social-item {
   color: var(--social-bgc);
   background-color: var(--white-color);
 }
@@ -317,14 +331,15 @@ img {
   fill: currentColor;
 }
 
+.social-footer .social-item {
+  color: var(--white-color);
+  background-color: var(--social-join);
+}
+
 .social-item:hover,
 .social-item:focus {
   color: var(--white-color);
   background-color: var(--accent-color);
-}
-.join-item {
-  color: var(--white-color);
-  background-color: var(--social-join);
 }
 /* Клиенты */
 .clients-list {
@@ -333,8 +348,11 @@ img {
   align-items: center;
 }
 .item-client {
-  display: block;
-  padding: 14.5px 30.5px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 170px;
+  min-height: 92px;
   color: var(--social-bgc);
   border: 1px solid var(--social-bgc);
   border-radius: 4px;
